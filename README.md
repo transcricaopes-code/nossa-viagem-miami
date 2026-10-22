@@ -1,33 +1,29 @@
-# Nossa Viagem a Miami — primeira versão
+# Here we go 🫶🏼
 
-Site estático, responsivo e mobile-first para o roteiro de 18/11/2026.
+Site estático, responsivo e mobile-first para organizar os dias da viagem.
 
-## Testar localmente
-1. Extraia o ZIP.
-2. Abra `index.html` no navegador. Para melhor compatibilidade, use uma extensão de servidor local ou execute `python3 -m http.server 8000` na pasta e abra `http://localhost:8000`.
+## Arquivos
+- `index.html`: site completo.
+- `vercel.json`: configuração simples da Vercel.
 
-## Publicar na Vercel (sem terminal)
-1. Acesse https://vercel.com/ e entre/crie uma conta.
-2. Crie um repositório no GitHub e envie `index.html` para a raiz do repositório.
-3. Na Vercel, selecione **Add New → Project** e importe o repositório.
-4. Como é um site estático, não precisa de framework nem build command. Se a Vercel pedir, deixe Build Command vazio e Output Directory como `.`.
-5. Clique em **Deploy**. A Vercel fornecerá um endereço `*.vercel.app` que você pode compartilhar com sua namorada.
+## Atualizar o site publicado
+1. No GitHub, abra o repositório `nossa-viagem-miami`.
+2. Use **Add file → Upload files** para enviar os arquivos atualizados, ou abra `index.html` e use o lápis para editar.
+3. Faça **Commit changes**. Se o repositório estiver conectado à Vercel, ela publicará a atualização automaticamente.
 
-## Publicar sem GitHub
-Na Vercel, use a opção de deploy pela CLI se você já tiver Node.js instalado:
-- `npm i -g vercel`
-- entre na pasta que contém `index.html`
-- execute `vercel`
-- siga as perguntas e depois execute `vercel --prod` para publicar a versão de produção.
+## Renomear o projeto na Vercel
+1. Abra o projeto na Vercel.
+2. Entre em **Settings → General**.
+3. Procure **Project Name**, altere para `here-we-go` (ou outro nome disponível) e salve.
+4. Verifique a seção **Domains**. Se o endereço antigo não tiver sido alterado automaticamente, adicione/ajuste o domínio padrão disponível para o novo nome.
+5. Teste o novo endereço e compartilhe-o. O endereço antigo pode deixar de ser o principal; confirme antes de enviar o novo link.
 
-## O que funciona
-- Layout adaptado para celular e desktop.
-- Botões de navegação do Google Maps para cada trecho e para o percurso completo.
-- Mapa incorporado da região de Miami.
-- Checkboxes de progresso salvos no navegador atual.
+## Conteúdo desta versão
+- Nome e identidade visual: Here we go 🫶🏼.
+- Estrutura com seletor de dias; Dia 1 de Miami em 18/11/2026 está preenchido.
+- Dias 2 e 3 aparecem como espaços reservados para próximos roteiros.
+- Removidas as caixas de conclusão e a barra de progresso.
+- Cartões com endereços, links de navegação e mapa incorporado.
 
-## Limitações desta versão
-- As marcações ficam salvas apenas no navegador/dispositivo usado; não sincronizam entre duas pessoas.
-- O mapa incorporado mostra a região de Miami, enquanto o botão abre a rota com as paradas no Google Maps.
-- Fotos e fontes são carregadas de serviços externos; é necessária conexão à internet.
-- Confirme endereços, funcionamento, tarifas e trânsito perto da viagem. Horários do roteiro são estimativas.
+## Observações
+O mapa incorporado mostra a região geral de Miami; o botão do percurso abre o Google Maps. Reconfirme horários, endereços e tarifas perto da viagem. A versão atual não sincroniza dados entre dispositivos, pois não usa banco de dados.
