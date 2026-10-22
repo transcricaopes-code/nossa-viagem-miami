@@ -18,7 +18,7 @@
     *{box-sizing:border-box} html{scroll-behavior:smooth}
     body{margin:0;color:var(--ink);background:#f7f8f5;font-family:"DM Sans",sans-serif}
     a{color:inherit} button{font:inherit}
-    .hero{min-height:270px;position:relative;overflow:hidden;color:white;background:linear-gradient(90deg,rgba(9,39,43,.76),rgba(9,39,43,.14)),url("https://images.unsplash.com/photo-1535498730771-e735b998cd64?auto=format&fit=crop&w=1800&q=85") center 54%/cover;display:flex;align-items:end}
+    .hero{min-height:270px;position:relative;overflow:hidden;color:white;background:linear-gradient(90deg,rgba(9,39,43,.76),rgba(9,39,43,.14)),url("florida-miami-hero.png") center 54%/cover;display:flex;align-items:end}
     .hero-inner{width:min(1120px,100%);margin:0 auto;padding:30px 22px 28px}
     .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;font-weight:700;opacity:.9}
     h1{font:700 clamp(2.6rem,10vw,4.7rem)/.98 "Playfair Display",serif;margin:10px 0 12px;letter-spacing:-.04em}
@@ -34,6 +34,9 @@
     .day-card strong{display:block;font-size:1rem;margin-bottom:5px}
     .day-card small{display:block;color:var(--muted);font-size:.8rem;line-height:1.4}
     .day-card .status{display:inline-block;margin-top:10px;font-size:.72rem;font-weight:700;color:var(--teal)}
+    .day-photo{width:100%;height:92px;object-fit:cover;border-radius:11px;margin:0 0 12px;display:block}
+    .day-hero{width:100%;height:190px;object-fit:cover;border-radius:18px;margin:0 0 16px;display:block}
+    .day-card .day-number{margin-bottom:8px}
     .section-title{font:700 1.55rem "Playfair Display",serif;margin:25px 0 14px}
     .layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);gap:22px;align-items:start}
     .timeline{display:grid;gap:13px}
@@ -100,13 +103,29 @@
         <span class="day-number">DIA 2</span><strong>Fort Lauderdale</strong><small>Quinta-feira · 19 nov. 2026</small><span class="status">Roteiro pronto ↗</span>
       </button>
       <button class="day-card" type="button" data-day="day3" aria-pressed="false">
-        <span class="day-number">DIA 3</span><strong>A planejar</strong><small>Adicionaremos o próximo dia aqui.</small><span class="status">Em planejamento</span>
+        <img class="day-photo" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=80" alt="Paisagem da Flórida" loading="lazy"><span class="day-number">DIA 3</span><strong>A planejar</strong><small>Adicionaremos o próximo dia aqui.</small><span class="status">Em planejamento</span>
+      </button>
+      <button class="day-card" type="button" data-day="day4" aria-pressed="false">
+        <img class="day-photo" src="https://images.unsplash.com/photo-150053085085?auto=format&fit=crop&w=700&q=80" alt="Paisagem da Flórida" loading="lazy"><span class="day-number">DIA 4</span><strong>A planejar</strong><small>Sábado · 21 nov. 2026</small><span class="status">Em planejamento</span>
+      </button>
+      <button class="day-card" type="button" data-day="day5" aria-pressed="false">
+        <img class="day-photo" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=700&q=80" alt="Espaço e exploração" loading="lazy"><span class="day-number">DIA 5</span><strong>Kennedy Space Center</strong><small>Domingo · 22 nov. 2026</small><span class="status">Roteiro pronto ↗</span>
+      </button>
+      <button class="day-card" type="button" data-day="day6" aria-pressed="false">
+        <img class="day-photo" src="https://images.unsplash.com/photo-1513883049090-d0b7439799bf?auto=format&fit=crop&w=700&q=80" alt="Parque temático" loading="lazy"><span class="day-number">DIA 6</span><strong>EPCOT</strong><small>Segunda-feira · 23 nov. 2026</small><span class="status">Roteiro pronto ↗</span>
+      </button>
+      <button class="day-card" type="button" data-day="day7" aria-pressed="false">
+        <img class="day-photo" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=700&q=80" alt="Paisagem para planejar o dia" loading="lazy"><span class="day-number">DIA 7</span><strong>A planejar</strong><small>Terça-feira · 24 nov. 2026</small><span class="status">Em planejamento</span>
+      </button>
+      <button class="day-card" type="button" data-day="day8" aria-pressed="false">
+        <img class="day-photo" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=700&q=80" alt="Avião em voo" loading="lazy"><span class="day-number">DIA 8</span><strong>Volta ao Brasil</strong><small>Quarta-feira · 25 nov. 2026</small><span class="status">Voos definidos</span>
       </button>
     </div>
   </section>
 
   <section class="day-content" id="day1">
     <h2 class="section-title">Dia 1 · Miami</h2>
+    <img class="day-hero" src="https://images.unsplash.com/photo-1535498730771-e735b998cd64?auto=format&fit=crop&w=1500&q=85" alt="Praia e arquitetura Art Déco de Miami" loading="lazy">
     <p class="subtle" style="margin-top:-7px;margin-bottom:16px">Quarta-feira, 18 de novembro de 2026 · Chegada, compras, cultura, praia e jantar cubano.</p>
     <div class="layout">
       <div class="main-col" id="roteiro">
@@ -164,6 +183,7 @@
 
   <section class="day-content" id="day2" hidden>
     <h2 class="section-title">Dia 2 · Compras e Fort Lauderdale</h2>
+    <img class="day-hero" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1500&q=85" alt="Mar e praia no sul da Flórida" loading="lazy">
     <p class="subtle" style="margin-top:-7px;margin-bottom:16px">Quinta-feira, 19 de novembro de 2026 · Outlet, praia, passeio pela Las Olas e jantar mexicano.</p>
     <div class="layout">
       <div class="main-col" id="roteiro-dia2">
@@ -226,7 +246,53 @@
     <div class="planning-empty"><strong>Este dia ainda está em construção.</strong>Quando definirmos os passeios, adicionaremos aqui os horários, endereços, rotas e informações úteis.</div>
   </section>
 
-  <p class="footer">Here we go 🫶🏼 · Nossa viagem<br>Endereços, horários, tarifas e trânsito devem ser reconfirmados perto da viagem.</p>
+  <section class="day-content" id="day4" hidden>
+    <h2 class="section-title">Dia 4 · A planejar</h2>
+    <img class="day-hero" src="https://images.unsplash.com/photo-150053085085?auto=format&fit=crop&w=1500&q=85" alt="Paisagem da Flórida" loading="lazy">
+    <div class="planning-empty"><strong>Sábado, 21 de novembro de 2026.</strong>Este dia permanece em aberto. Quando definirmos os passeios, adicionaremos horários, endereços, fotos e rotas.</div>
+  </section>
+
+  <section class="day-content" id="day5" hidden>
+    <h2 class="section-title">Dia 5 · Kennedy Space Center e chegada a Orlando</h2>
+    <img class="day-hero" src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1500&q=85" alt="Foguete e exploração espacial" loading="lazy">
+    <p class="subtle" style="margin-top:-7px;margin-bottom:16px">Domingo, 22 de novembro de 2026 · Aproveitar o complexo espacial o máximo possível e seguir para Orlando.</p>
+    <div class="layout"><div class="main-col"><div class="timeline">
+      <article class="stop"><div class="stop-top"><div class="time">05h30</div><div><h3>Saída do hotel em Deerfield Beach</h3><p class="address">Extended Stay America Premier Suites – Fort Lauderdale – Deerfield Beach</p><p class="desc">Saída cedo para chegar próximo da abertura. A viagem pode levar cerca de 3h ou mais, dependendo do trânsito; confirme a rota na manhã da viagem.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=Extended+Stay+America+Premier+Suites+Fort+Lauderdale+Deerfield+Beach&destination=Kennedy+Space+Center+Visitor+Complex,+Space+Commerce+Way,+Merritt+Island,+FL+32953&travelmode=driving" target="_blank" rel="noopener">↗ Rota para o Kennedy Space Center</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">09h00</div><div><h3>Kennedy Space Center Visitor Complex</h3><p class="address">Space Commerce Way, Merritt Island, FL 32953</p><p class="desc">Dia dedicado ao complexo. Para aproveitar o máximo, priorize o ônibus para as instalações, Apollo/Saturn V Center, Space Shuttle Atlantis e exposições principais. O horário de funcionamento pode mudar; confirme no calendário oficial e compre ingressos antecipadamente.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Kennedy+Space+Center+Visitor+Complex" target="_blank" rel="noopener">↗ Abrir no mapa</a><a class="btn btn-secondary" href="https://www.kennedyspacecenter.com/" target="_blank" rel="noopener">Ingressos e horários oficiais</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">17h00</div><div><h3>Viagem para Orlando e check-in</h3><p class="address">Fairfield Inn & Suites by Marriott Orlando Lake Buena Vista</p><p class="desc">Saia após o fechamento do complexo. O tempo de viagem até Lake Buena Vista varia com o trânsito; confirme o endereço exato da reserva antes de iniciar a rota.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=Kennedy+Space+Center+Visitor+Complex&destination=Fairfield+Inn+%26+Suites+by+Marriott+Orlando+Lake+Buena+Vista&travelmode=driving" target="_blank" rel="noopener">↗ Rota para o hotel</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">À noite</div><div><h3>Jantar country no Ole Red Orlando</h3><p class="address">8417 International Drive, Orlando, FL 32819</p><p class="desc">Restaurante com música country ao vivo e comida americana. Depois de um dia longo, confirme a programação e o tempo de espera; atendimento sem reserva pode estar sujeito à fila.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=Fairfield+Inn+%26+Suites+by+Marriott+Orlando+Lake+Buena+Vista&destination=Ole+Red,+8417+International+Drive,+Orlando,+FL+32819&travelmode=driving" target="_blank" rel="noopener">↗ Rota para o Ole Red</a><a class="btn btn-secondary" href="https://olered.com/orlando/" target="_blank" rel="noopener">Site e programação</a></div></article>
+    </div></div><aside class="side"><section class="panel"><div class="panel-head"><h2>Mapa do percurso</h2></div><iframe class="map-frame" title="Mapa Kennedy Space Center e Orlando" loading="lazy" src="https://maps.google.com/maps?q=Kennedy%20Space%20Center%20Visitor%20Complex&t=&z=8&ie=UTF8&iwloc=&output=embed"></iframe><div class="panel-body"><a class="btn btn-primary route-link" href="https://www.google.com/maps/dir/?api=1&origin=Extended+Stay+America+Premier+Suites+Fort+Lauderdale+Deerfield+Beach&destination=Ole+Red,+8417+International+Drive,+Orlando,+FL+32819&waypoints=Kennedy+Space+Center+Visitor+Complex%7CFairfield+Inn+%26+Suites+by+Marriott+Orlando+Lake+Buena+Vista&travelmode=driving" target="_blank" rel="noopener">↗ Abrir percurso completo</a></div></section><div class="note"><strong>Para aproveitar o máximo</strong>Compre ingressos antes, confira o horário de abertura, comece pelo transporte de visita às instalações e deixe margem para a viagem até Orlando. O jantar é flexível conforme o horário de saída.</div></aside></div>
+  </section>
+
+  <section class="day-content" id="day6" hidden>
+    <h2 class="section-title">Dia 6 · EPCOT</h2>
+    <img class="day-hero" src="https://images.unsplash.com/photo-1513883049090-d0b7439799bf?auto=format&fit=crop&w=1500&q=85" alt="Parque temático com atmosfera festiva" loading="lazy">
+    <p class="subtle" style="margin-top:-7px;margin-bottom:16px">Segunda-feira, 23 de novembro de 2026 · Chegar antes da abertura e aproveitar o parque o dia inteiro.</p>
+    <div class="layout"><div class="main-col"><div class="timeline">
+      <article class="stop"><div class="stop-top"><div class="time">07h30</div><div><h3>Saída do hotel</h3><p class="address">Fairfield Inn & Suites by Marriott Orlando Lake Buena Vista</p><p class="desc">Saia cedo para estacionar, passar pela segurança e chegar à entrada antes da abertura. Confira o horário oficial do parque e os benefícios de entrada antecipada aplicáveis à sua hospedagem.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=Fairfield+Inn+%26+Suites+by+Marriott+Orlando+Lake+Buena+Vista&destination=EPCOT,+200+Epcot+Center+Drive,+Lake+Buena+Vista,+FL+32830&travelmode=driving" target="_blank" rel="noopener">↗ Rota para o EPCOT</a><a class="btn btn-secondary" href="https://disneyworld.disney.go.com/destinations/epcot/" target="_blank" rel="noopener">Horários e informações oficiais</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">Antes das 09h</div><div><h3>Chegada e entrada</h3><p class="address">EPCOT · 200 Epcot Center Drive, Lake Buena Vista, FL 32830</p><p class="desc">Objetivo: estar na entrada com antecedência. O horário de abertura e a entrada antecipada podem variar; confira o calendário oficial alguns dias antes.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=EPCOT+Walt+Disney+World" target="_blank" rel="noopener">↗ Localização</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">Dia inteiro</div><div><h3>Atrações e pavilhões do EPCOT</h3><p class="address">World Celebration, World Discovery, World Nature e World Showcase</p><p class="desc">Monte a ordem das atrações com base nas prioridades de vocês e nos tempos de fila do aplicativo My Disney Experience. Reserve tempo para explorar os pavilhões e planejar refeições.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://disneyworld.disney.go.com/plan/" target="_blank" rel="noopener">↗ Planejar visita</a></div></article>
+    </div></div><aside class="side"><section class="panel"><div class="panel-head"><h2>Mapa do parque</h2></div><iframe class="map-frame" title="Mapa do EPCOT" loading="lazy" src="https://maps.google.com/maps?q=EPCOT%20Walt%20Disney%20World&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe><div class="panel-body"><a class="btn btn-primary route-link" href="https://www.google.com/maps/dir/?api=1&origin=Fairfield+Inn+%26+Suites+by+Marriott+Orlando+Lake+Buena+Vista&destination=EPCOT,+200+Epcot+Center+Drive,+Lake+Buena+Vista,+FL+32830&travelmode=driving" target="_blank" rel="noopener">↗ Abrir rota no Google Maps</a></div></section><div class="note"><strong>Chegar cedo</strong>Confira o horário oficial do dia, as regras de entrada antecipada e o aplicativo My Disney Experience. O tempo de chegada deve incluir estacionamento, transporte interno e segurança.</div></aside></div>
+  </section>
+
+  <section class="day-content" id="day7" hidden>
+    <h2 class="section-title">Dia 7 · A planejar</h2>
+    <img class="day-hero" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1500&q=85" alt="Paisagem para planejar o dia" loading="lazy">
+    <div class="planning-empty"><strong>Terça-feira, 24 de novembro de 2026.</strong>Dia mantido em aberto para definirmos o roteiro. Como o voo sai de Miami na manhã seguinte, será importante decidir onde dormir na noite do dia 24 e planejar o deslocamento até o aeroporto.</div>
+  </section>
+
+  <section class="day-content" id="day8" hidden>
+    <h2 class="section-title">Dia 8 · Volta ao Brasil</h2>
+    <img class="day-hero" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1500&q=85" alt="Avião em voo" loading="lazy">
+    <p class="subtle" style="margin-top:-7px;margin-bottom:16px">Quarta-feira, 25 de novembro de 2026 · Saída de Miami (MIA) às 09h20.</p>
+    <div class="layout"><div class="main-col"><div class="timeline">
+      <article class="stop"><div class="stop-top"><div class="time">Antes do voo</div><div><h3>Chegar ao Aeroporto Internacional de Miami</h3><p class="address">Miami International Airport (MIA)</p><p class="desc">Planeje chegar ao aeroporto por volta das 06h00 para ter margem para devolver o carro alugado, despachar bagagem, passar pela segurança e cumprir os procedimentos internacionais. Confirme as recomendações da companhia aérea.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Miami+International+Airport+MIA" target="_blank" rel="noopener">↗ Localização do aeroporto</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">09h20</div><div><h3>Voo LA8195 — Miami para São Paulo/Guarulhos</h3><p class="address">MIA → GRU</p><p class="desc">Partida prevista às 09h20. Confirme terminal, portão, franquia de bagagem e horário atualizado diretamente com a LATAM.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.latamairlines.com/" target="_blank" rel="noopener">↗ Consultar voo na LATAM</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">Conexão</div><div><h3>Voo LA4772 — São Paulo/Guarulhos para Maceió</h3><p class="address">GRU → MCZ</p><p class="desc">Conexão em Guarulhos para seguir até Maceió. Confira o horário, terminal e se a bagagem será despachada até o destino final no mesmo bilhete.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.latamairlines.com/" target="_blank" rel="noopener">↗ Consultar voo na LATAM</a></div></article>
+    </div></div><aside class="side"><section class="panel"><div class="panel-head"><h2>Dados do retorno</h2></div><div class="panel-body"><ul class="mini-list"><li><span class="dot"></span><span><strong>Data</strong><br>Quarta-feira, 25/11/2026</span></li><li><span class="dot"></span><span><strong>Partida de Miami</strong><br>09h20 · voo LA8195</span></li><li><span class="dot"></span><span><strong>Conexão</strong><br>GRU · voo LA4772 para MCZ</span></li><li><span class="dot"></span><span><strong>Plano para a noite anterior</strong><br>Definir hospedagem/localização em 24/11 para garantir deslocamento seguro e pontual até MIA.</span></li></ul></div></section><div class="note"><strong>Atenção ao deslocamento</strong>Se vocês ainda estiverem em Orlando no dia 24, não é recomendável deixar para dirigir até Miami na madrugada do voo sem planejar a margem de segurança. Podemos organizar o dia 24 para dormir perto do aeroporto de Miami.</div></aside></div>
+  </section>
+
+  <p class="footer">Here we go 🫶🏼 · 18 a 25 de novembro de 2026<br>Endereços, horários, tarifas, voos e trânsito devem ser reconfirmados perto da viagem.</p>
 </main>
 
 <nav class="bottom-nav" aria-label="Navegação rápida">

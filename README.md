@@ -21,7 +21,7 @@ Site estático, responsivo e mobile-first para organizar os dias da viagem.
 ## Conteúdo desta versão
 - Nome e identidade visual: Here we go 🫶🏼.
 - Estrutura com seletor de dias; Dia 1 de Miami em 18/11/2026 está preenchido.
-- Dias 2 e 3 aparecem como espaços reservados para próximos roteiros.
+- Dias 3, 4 e 7 permanecem em aberto; dia 5 (22/11) inclui Kennedy Space Center e jantar no Ole Red; dia 6 (23/11) inclui EPCOT; dia 8 (25/11) registra os voos de retorno MIA–GRU–MCZ.
 - Removidas as caixas de conclusão e a barra de progresso.
 - Cartões com endereços, links de navegação e mapa incorporado.
 
