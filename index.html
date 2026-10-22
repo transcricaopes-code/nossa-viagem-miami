@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#123f43">
+  <meta name="description" content="Nosso roteiro compartilhável de Miami — 18 de novembro de 2026.">
+  <title>Nossa Viagem a Miami · Dia 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #193638; --muted: #657779; --teal: #174e50; --teal-light: #e7f1ef;
+      --sand: #f6f1e8; --paper: #fffefa; --line: #e6e8e2; --coral: #dc795f;
+      --gold: #e6b75c; --shadow: 0 8px 24px rgba(23, 55, 55, .07);
+      --radius: 20px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: #f7f8f5; font-family: "DM Sans", sans-serif; }
+    a { color: inherit; }
+    button { font: inherit; }
+    .hero {
+      min-height: 265px; position: relative; overflow: hidden; color: white;
+      background: linear-gradient(90deg, rgba(9,39,43,.76), rgba(9,39,43,.14)),
+      url("https://images.unsplash.com/photo-1535498730771-e735b998cd64?auto=format&fit=crop&w=1800&q=85") center 54%/cover;
+      display: flex; align-items: end;
+    }
+    .hero-inner { width: min(1120px, 100%); margin: 0 auto; padding: 30px 22px 28px; }
+    .eyebrow { text-transform: uppercase; letter-spacing: .16em; font-size: .72rem; font-weight: 700; opacity: .88; }
+    h1 { font: 700 clamp(2.7rem, 10vw, 4.8rem)/.98 "Playfair Display", serif; margin: 9px 0 12px; letter-spacing: -.04em; }
+    .hero-sub { font-size: .98rem; max-width: 520px; line-height: 1.5; margin: 0; }
+    .date-pill { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 8px 12px; margin-bottom: 14px; font-size: .82rem; background: rgba(255,255,255,.13); backdrop-filter: blur(8px); }
+    .wrap { width: min(1120px, 100%); margin: 0 auto; padding: 22px 16px 100px; }
+    .intro-row { display: flex; gap: 12px; align-items: stretch; margin-bottom: 22px; }
+    .intro-card { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 15px; flex: 1; box-shadow: var(--shadow); }
+    .intro-card strong { display: block; font-size: 1.05rem; margin-bottom: 4px; }
+    .intro-card span { color: var(--muted); font-size: .8rem; line-height: 1.4; }
+    .section-title { font: 700 1.55rem "Playfair Display", serif; margin: 28px 0 14px; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(300px, .85fr); gap: 22px; align-items: start; }
+    .timeline { display: grid; gap: 13px; }
+    .stop { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+    .stop-top { display: grid; grid-template-columns: 72px 1fr; gap: 13px; padding: 15px; }
+    .time { color: var(--teal); background: var(--teal-light); border-radius: 12px; padding: 9px 5px; text-align: center; align-self: start; font-weight: 700; font-size: .9rem; }
+    .stop h3 { margin: 0 0 5px; font-size: 1.04rem; line-height: 1.25; }
+    .stop .address { color: var(--muted); font-size: .81rem; line-height: 1.45; margin: 0 0 8px; }
+    .stop .desc { font-size: .88rem; line-height: 1.5; margin: 0; }
+    .stop-actions { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 15px 15px 100px; }
+    .btn { min-height: 42px; display: inline-flex; justify-content: center; align-items: center; gap: 7px; border: 0; border-radius: 999px; padding: 10px 14px; text-decoration: none; cursor: pointer; font-size: .82rem; font-weight: 700; transition: transform .15s, background .15s; }
+    .btn:active { transform: scale(.98); }
+    .btn-primary { color: white; background: var(--teal); }
+    .btn-secondary { color: var(--teal); background: var(--teal-light); }
+    .btn-quiet { color: var(--muted); background: #f1f2ee; }
+    .done { display: flex; align-items: center; gap: 7px; font-size: .8rem; color: var(--muted); cursor: pointer; user-select: none; }
+    .done input { width: 18px; height: 18px; accent-color: var(--teal); }
+    .stop.is-done { opacity: .68; }
+    .stop.is-done h3 { text-decoration: line-through; }
+    .side { display: grid; gap: 16px; position: sticky; top: 16px; }
+    .panel { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+    .panel-head { padding: 16px 17px 10px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .panel-head h2 { font-size: 1rem; margin: 0; }
+    .map-frame { display: block; width: 100%; height: 260px; border: 0; background: #e9efeb; }
+    .panel-body { padding: 0 17px 17px; }
+    .route-link { display: flex; justify-content: center; width: 100%; margin-top: 12px; }
+    .mini-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 11px; }
+    .mini-list li { display: flex; align-items: start; gap: 10px; font-size: .83rem; line-height: 1.45; }
+    .dot { width: 9px; height: 9px; margin-top: 5px; flex: 0 0 auto; border-radius: 50%; background: var(--coral); }
+    .note { background: #fff5df; border: 1px solid #f1dfb5; border-radius: 16px; padding: 16px; font-size: .84rem; line-height: 1.5; }
+    .note strong { display: block; margin-bottom: 5px; }
+    .footer { color: var(--muted); font-size: .76rem; line-height: 1.5; margin-top: 25px; text-align: center; }
+    .bottom-nav { display: none; }
+    .progress-wrap { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin: 0 0 14px; color: var(--muted); font-size: .82rem; }
+    .progress { height: 6px; border-radius: 20px; overflow: hidden; background: #e3e8e3; flex: 1; }
+    .progress > span { display: block; height: 100%; width: 0; background: var(--coral); transition: width .2s; }
+    @media (max-width: 760px) {
+      .hero { min-height: 255px; background-position: center; }
+      .hero-inner { padding: 25px 19px 23px; }
+      .hero-sub { font-size: .9rem; max-width: 330px; }
+      .wrap { padding: 15px 12px 100px; }
+      .intro-row { gap: 8px; }
+      .intro-card { padding: 12px; }
+      .intro-card strong { font-size: .92rem; }
+      .intro-card span { font-size: .73rem; }
+      .layout { display: flex; flex-direction: column; gap: 18px; }
+      .main-col, .side { width: 100%; }
+      .side { position: static; }
+      .section-title { font-size: 1.42rem; margin-top: 22px; }
+      .stop-top { grid-template-columns: 62px 1fr; gap: 10px; padding: 13px; }
+      .time { font-size: .82rem; padding: 8px 3px; }
+      .stop h3 { font-size: .97rem; }
+      .stop .address { font-size: .77rem; }
+      .stop .desc { font-size: .84rem; }
+      .stop-actions { padding: 0 13px 13px 85px; }
+      .btn { min-height: 40px; font-size: .78rem; padding: 9px 12px; }
+      .map-frame { height: 245px; }
+      .bottom-nav { position: fixed; display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; left: 10px; right: 10px; bottom: max(10px, env(safe-area-inset-bottom)); padding: 7px; background: rgba(255,254,250,.95); border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 8px 30px rgba(14,45,45,.18); backdrop-filter: blur(12px); z-index: 20; }
+      .bottom-nav a { text-align: center; padding: 8px 4px; text-decoration: none; color: var(--teal); font-size: .75rem; font-weight: 700; border-radius: 11px; }
+      .bottom-nav a:active { background: var(--teal-light); }
+      .footer { padding: 0 8px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
+  </style>
+</head>
+<body>
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <div class="date-pill">✦ Nossa viagem · 18 nov 2026</div>
+      <div class="eyebrow">Roteiro compartilhado</div>
+      <h1>Miami, dia 1.</h1>
+      <p class="hero-sub">Chegada, compras, cultura, praia e um jantar cubano. Um dia planejado para aproveitar sem correria.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="intro-row" aria-label="Resumo do dia">
+      <div class="intro-card"><strong>✈️ 05h25</strong><span>Chegada ao MIA</span></div>
+      <div class="intro-card"><strong>📍 6 paradas</strong><span>Do aeroporto ao hotel</span></div>
+      <div class="intro-card"><strong>🚗 Carro</strong><span>Retirada no aeroporto</span></div>
+    </div>
+
+    <div class="layout">
+      <section class="main-col" id="roteiro">
+        <h2 class="section-title">O roteiro do dia</h2>
+        <div class="progress-wrap">
+          <span id="progress-label">0 de 6 concluídas</span>
+          <div class="progress" role="progressbar" aria-label="Progresso do roteiro" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0"><span id="progress-bar"></span></div>
+        </div>
+
+        <div class="timeline">
+          <article class="stop" data-stop="airport">
+            <div class="stop-top">
+              <div class="time">05h25</div>
+              <div><h3>Chegada a Miami</h3><p class="address">Miami International Airport (MIA)</p><p class="desc">Imigração, bagagem e retirada do carro alugado. Reserve cerca de 1h30–2h, com margem para filas.</p></div>
+            </div>
+            <div class="stop-actions">
+              <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=Miami+International+Airport&destination=299+SE+3rd+Ave,+Miami,+FL+33131&travelmode=driving" target="_blank" rel="noopener">↗ Rota seguinte</a>
+              <label class="done"><input type="checkbox" data-key="airport"> Concluído</label>
+            </div>
+          </article>
+
+          <article class="stop" data-stop="wholefoods">
+            <div class="stop-top">
+              <div class="time">07h30</div>
+              <div><h3>Whole Foods Market</h3><p class="address">299 SE 3rd Ave, Miami, FL 33131</p><p class="desc">Compras rápidas: água, frutas, lanches e itens para os primeiros dias. O horário de abertura informado é 7h30; confirme perto da viagem.</p></div>
+            </div>
+            <div class="stop-actions">
+              <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=299+SE+3rd+Ave,+Miami,+FL+33131&travelmode=driving" target="_blank" rel="noopener">↗ Abrir rota</a>
+              <a class="btn btn-secondary" href="https://www.wholefoodsmarket.com/stores/downtownmiami" target="_blank" rel="noopener">Horários</a>
+              <label class="done"><input type="checkbox" data-key="wholefoods"> Concluído</label>
+            </div>
+          </article>
+
+          <article class="stop" data-stop="vizcaya">
+            <div class="stop-top">
+              <div class="time">09h30</div>
+              <div><h3>Vizcaya Museum and Gardens</h3><p class="address">3251 South Miami Ave, Miami, FL 33129</p><p class="desc">Visita à residência histórica e aos jardins. Planeje cerca de 2h–2h15. Verifique ingressos e eventuais alterações de funcionamento.</p></div>
+            </div>
+            <div class="stop-actions">
+              <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=299+SE+3rd+Ave,+Miami,+FL+33131&destination=Vizcaya+Museum+and+Gardens,+3251+South+Miami+Ave,+Miami,+FL+33129&travelmode=driving" target="_blank" rel="noopener">↗ Abrir rota</a>
+              <a class="btn btn-secondary" href="https://vizcaya.org/" target="_blank" rel="noopener">Ingressos e informações</a>
+              <label class="done"><input type="checkbox" data-key="vizcaya"> Concluído</label>
+            </div>
+          </article>
+
+          <article class="stop" data-stop="craft">
+            <div class="stop-top">
+              <div class="time">12h30</div>
+              <div><h3>Almoço no CRAFT Bayside</h3><p class="address">900 Biscayne Blvd, Suite 101B, Miami, FL 33132</p><p class="desc">Pausa para almoçar em Downtown Miami. Confirme horário, endereço e disponibilidade próximos à data.</p></div>
+            </div>
+            <div class="stop-actions">
+              <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=Vizcaya+Museum+and+Gardens,+Miami,+FL&destination=CRAFT+Bayside,+900+Biscayne+Blvd,+Miami,+FL&travelmode=driving" target="_blank" rel="noopener">↗ Abrir rota</a>
+              <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=CRAFT+Bayside+Miami" target="_blank" rel="noopener">Local e avaliações</a>
+              <label class="done"><input type="checkbox" data-key="craft"> Concluído</label>
+            </div>
+          </article>
+
+          <article class="stop" data-stop="beach">
+            <div class="stop-top">
+              <div class="time">14h30</div>
+              <div><h3>Miami Beach · South Beach</h3><p class="address">13th Street Garage, 1301 Collins Ave, Miami Beach, FL 33139</p><p class="desc">Estacione uma vez e explore a pé: Ocean Drive, Lummus Park e praia. Lincoln Road fica como opção se houver disposição.</p></div>
+            </div>
+            <div class="stop-actions">
+              <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=CRAFT+Bayside,+900+Biscayne+Blvd,+Miami,+FL&destination=1301+Collins+Ave,+Miami+Beach,+FL+33139&travelmode=driving" target="_blank" rel="noopener">↗ Rota para a garagem</a>
+              <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=Ocean+Drive+Miami+Beach" target="_blank" rel="noopener">Ocean Drive</a>
+              <label class="done"><input type="checkbox" data-key="beach"> Concluído</label>
+            </div>
+          </article>
+
+          <article class="stop" data-stop="versailles">
+            <div class="stop-top">
+              <div class="time">17h30</div>
+              <div><h3>Jantar no Versailles Restaurant</h3><p class="address">3555 SW 8th St, Miami, FL 33135</p><p class="desc">Culinária cubana em Little Havana. Boa parada antes de seguir para o hotel. Horários e espera podem variar.</p></div>
+            </div>
+            <div class="stop-actions">
+              <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=1301+Collins+Ave,+Miami+Beach,+FL+33139&destination=Versailles+Restaurant,+3555+SW+8th+St,+Miami,+FL+33135&travelmode=driving" target="_blank" rel="noopener">↗ Abrir rota</a>
+              <a class="btn btn-secondary" href="https://www.versaillesrestaurant.com/" target="_blank" rel="noopener">Site do restaurante</a>
+              <label class="done"><input type="checkbox" data-key="versailles"> Concluído</label>
+            </div>
+          </article>
+
+          <article class="stop" data-stop="hotel">
+            <div class="stop-top">
+              <div class="time">19h00</div>
+              <div><h3>Hotel · descanso</h3><p class="address">8655 NW 21st Terrace, Miami, FL 33122</p><p class="desc">Último deslocamento do dia. A previsão é de cerca de 20–35 minutos a partir do Versailles, conforme o trânsito.</p></div>
+            </div>
+            <div class="stop-actions">
+              <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=Versailles+Restaurant,+3555+SW+8th+St,+Miami,+FL+33135&destination=8655+NW+21st+Terrace,+Miami,+FL+33122&travelmode=driving" target="_blank" rel="noopener">↗ Rota para o hotel</a>
+              <label class="done"><input type="checkbox" data-key="hotel"> Concluído</label>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <aside class="side">
+        <section class="panel" id="mapa">
+          <div class="panel-head"><h2>🗺️ Mapa do percurso</h2></div>
+          <iframe class="map-frame" title="Mapa de Miami e dos pontos do roteiro" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Miami%2C%20Florida&t=&z=11&ie=UTF8&iwloc=&output=embed"></iframe>
+          <div class="panel-body">
+            <a class="btn btn-primary route-link" href="https://www.google.com/maps/dir/?api=1&origin=Miami+International+Airport,+Miami,+FL&waypoints=299+SE+3rd+Ave,+Miami,+FL+33131%7CVizcaya+Museum+and+Gardens,+Miami,+FL%7CCRAFT+Bayside,+Miami,+FL%7C1301+Collins+Ave,+Miami+Beach,+FL+33139%7CVersailles+Restaurant,+Miami,+FL&destination=8655+NW+21st+Terrace,+Miami,+FL+33122&travelmode=driving" target="_blank" rel="noopener">↗ Abrir percurso completo no Google Maps</a>
+            <p style="font-size:.76rem;color:var(--muted);line-height:1.5;margin:10px 0 0">O mapa incorporado mostra a região geral. Use o botão para abrir a rota com as paradas no Google Maps e consultar o trânsito atualizado.</p>
+          </div>
+        </section>
+
+        <section class="panel" id="detalhes">
+          <div class="panel-head"><h2>Horários importantes</h2></div>
+          <div class="panel-body">
+            <ul class="mini-list">
+              <li><span class="dot"></span><span><strong>Whole Foods</strong><br>Planejado para 07h30; confirme o horário da unidade.</span></li>
+              <li><span class="dot"></span><span><strong>Vizcaya</strong><br>Entrada planejada para 09h30; consulte ingressos e calendário oficial.</span></li>
+              <li><span class="dot"></span><span><strong>CRAFT Bayside</strong><br>Confirme funcionamento e disponibilidade para almoço.</span></li>
+              <li><span class="dot"></span><span><strong>13th Street Garage</strong><br>Confira tarifas e regras atuais antes de estacionar.</span></li>
+              <li><span class="dot"></span><span><strong>Versailles</strong><br>Confirme o horário do jantar e considere possível espera.</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <div class="note"><strong>💡 Plano flexível</strong>Se o voo atrasar ou o cansaço apertar, reduza o tempo em Miami Beach e deixe a Lincoln Road para outro dia. O roteiro é uma previsão, não uma agenda rígida.</div>
+      </aside>
+    </div>
+
+    <p class="footer">Nossa Viagem a Miami · 18 de novembro de 2026<br>Endereços e horários devem ser reconfirmados perto da viagem. O progresso é salvo apenas neste navegador.</p>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Navegação rápida">
+    <a href="#roteiro">☷ Roteiro</a>
+    <a href="#mapa">⌖ Mapa</a>
+    <a href="#detalhes">ⓘ Informações</a>
+  </nav>
+
+  <script>
+    (function () {
+      const boxes = [...document.querySelectorAll('input[data-key]')];
+      const key = 'nossa-viagem-miami-dia1-v1';
+      let saved = {};
+      try { saved = JSON.parse(localStorage.getItem(key) || '{}'); } catch (e) {}
+      boxes.forEach(box => {
+        box.checked = Boolean(saved[box.dataset.key]);
+        updateCard(box);
+        box.addEventListener('change', () => {
+          saved[box.dataset.key] = box.checked;
+          try { localStorage.setItem(key, JSON.stringify(saved)); } catch (e) {}
+          updateCard(box);
+          updateProgress();
+        });
+      });
+      function updateCard(box) {
+        const card = box.closest('.stop');
+        if (card) card.classList.toggle('is-done', box.checked);
+      }
+      function updateProgress() {
+        const count = boxes.filter(box => box.checked).length;
+        document.getElementById('progress-label').textContent = count + ' de ' + boxes.length + ' paradas concluídas';
+        document.getElementById('progress-bar').style.width = (count / boxes.length * 100) + '%';
+        const progress = document.querySelector('[role="progressbar"]');
+        progress.setAttribute('aria-valuenow', count);
+      }
+      updateProgress();
+    })();
+  </script>
+</body>
+</html>
