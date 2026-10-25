@@ -27,17 +27,17 @@
     .wrap{width:min(1120px,100%);margin:0 auto;padding:22px 16px 100px}
     .overview-title{font:700 1.65rem "Playfair Display",serif;margin:6px 0 7px}
     .subtle{color:var(--muted);font-size:.9rem;line-height:1.5}
-    .day-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0 30px}
-    .day-card{background:var(--paper);border:1px solid var(--line);border-radius:17px;padding:16px;text-align:left;box-shadow:var(--shadow);color:var(--ink);cursor:pointer;min-height:130px;transition:border-color .15s,transform .15s}
-    .day-card:hover{transform:translateY(-2px)} .day-card.active{border:2px solid var(--teal);padding:15px;background:#f2f8f5}
-    .day-number{display:inline-flex;align-items:center;justify-content:center;border-radius:10px;background:var(--teal-light);color:var(--teal);font-size:.78rem;font-weight:700;padding:6px 9px;margin-bottom:12px}
+    .day-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0 24px}
+    .day-card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:13px;text-align:left;box-shadow:var(--shadow);color:var(--ink);cursor:pointer;min-height:112px;transition:border-color .15s,transform .15s}
+    .day-card:hover{transform:translateY(-2px)} .day-card.active{border:2px solid var(--teal);padding:12px;background:#f2f8f5}
+    .day-number{display:inline-flex;align-items:center;justify-content:center;border-radius:10px;background:var(--teal-light);color:var(--teal);font-size:.75rem;font-weight:700;padding:5px 8px;margin-bottom:8px}
     .day-card strong{display:block;font-size:1rem;margin-bottom:5px}
     .day-card small{display:block;color:var(--muted);font-size:.8rem;line-height:1.4}
-    .day-card .status{display:inline-block;margin-top:10px;font-size:.72rem;font-weight:700;color:var(--teal)}
-    .day-photo{width:100%;height:92px;object-fit:cover;border-radius:11px;margin:0 0 12px;display:block}
+    .day-card .status{display:inline-block;margin-top:7px;font-size:.7rem;font-weight:700;color:var(--teal)}
+    .day-photo{width:100%;height:76px;object-fit:cover;border-radius:10px;margin:0 0 8px;display:block}
     .day-hero{width:100%;height:190px;object-fit:cover;border-radius:18px;margin:0 0 16px;display:block}
     .day-card .day-number{margin-bottom:8px}
-    .section-title{font:700 1.55rem "Playfair Display",serif;margin:25px 0 14px}
+    .back-to-days{margin:0 0 8px;font-size:.8rem;font-weight:700;color:var(--teal)}.back-to-days a{text-decoration:none}.back-to-days a:hover{text-decoration:underline}.section-title{font:700 1.55rem "Playfair Display",serif;margin:8px 0 14px}
     .layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);gap:22px;align-items:start}
     .timeline{display:grid;gap:13px}
     .stop{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
@@ -69,7 +69,7 @@
     @media(max-width:760px){
       .hero{min-height:250px;background-position:center}.hero-inner{padding:25px 19px 23px}.hero-sub{font-size:.9rem;max-width:330px}
       .wrap{padding:15px 12px 100px}.day-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
-      .day-card{padding:13px;min-height:120px}.day-card.active{padding:12px}
+      .day-card{padding:10px;min-height:104px}.day-card.active{padding:9px}.day-photo{height:68px}
       .layout{display:flex;flex-direction:column;gap:18px}.main-col,.side{width:100%}.side{position:static}
       .section-title{font-size:1.42rem;margin-top:22px}.stop-top{grid-template-columns:62px 1fr;gap:10px;padding:13px}
       .time{font-size:.82rem;padding:8px 3px}.stop h3{font-size:.97rem}.address{font-size:.77rem}.desc{font-size:.84rem}
@@ -94,19 +94,19 @@
 <main class="wrap">
   <section id="inicio">
     <h2 class="overview-title">Nossa viagem</h2>
-    <p class="subtle">Escolha um dia para consultar os horários, endereços e rotas. Os roteiros serão atualizados conforme planejarmos a viagem.</p>
+    <p class="subtle">Escolha um dia para consultar horários estimados, endereços, mapas, estacionamento e links úteis. O roteiro é atualizado conforme fechamos cada dia.</p>
     <div class="day-grid" aria-label="Dias da viagem">
       <button class="day-card active" type="button" data-day="day1" aria-pressed="true">
         <span class="day-number">DIA 1</span><strong>Miami</strong><small>Quarta-feira · 18 nov. 2026</small><span class="status">Roteiro pronto ↗</span>
       </button>
       <button class="day-card" type="button" data-day="day2" aria-pressed="false">
-        <span class="day-number">DIA 2</span><strong>Fort Lauderdale</strong><small>Quinta-feira · 19 nov. 2026</small><span class="status">Roteiro pronto ↗</span>
+        <span class="day-number">DIA 2</span><strong>Compras + Miami Beach</strong><small>Quinta-feira · 19 nov. 2026</small><span class="status">Roteiro definido ↗</span>
       </button>
       <button class="day-card" type="button" data-day="day3" aria-pressed="false">
-        <img class="day-photo" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=80" alt="Paisagem da Flórida" loading="lazy"><span class="day-number">DIA 3</span><strong>A planejar</strong><small>Adicionaremos o próximo dia aqui.</small><span class="status">Em planejamento</span>
+        <img class="day-photo" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=700&q=80" alt="Mar azul das Florida Keys" loading="lazy"><span class="day-number">DIA 3</span><strong>Key West</strong><small>Sexta-feira · 20 nov. 2026</small><span class="status">Roteiro definido ↗</span>
       </button>
       <button class="day-card" type="button" data-day="day4" aria-pressed="false">
-        <img class="day-photo" src="https://images.unsplash.com/photo-150053085085?auto=format&fit=crop&w=700&q=80" alt="Paisagem da Flórida" loading="lazy"><span class="day-number">DIA 4</span><strong>A planejar</strong><small>Sábado · 21 nov. 2026</small><span class="status">Em planejamento</span>
+        <img class="day-photo" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=700&q=80" alt="Praia na Flórida" loading="lazy"><span class="day-number">DIA 4</span><strong>Deerfield Beach</strong><small>Sábado · 21 nov. 2026</small><span class="status">Só deslocamento</span>
       </button>
       <button class="day-card" type="button" data-day="day5" aria-pressed="false">
         <img class="day-photo" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=700&q=80" alt="Espaço e exploração" loading="lazy"><span class="day-number">DIA 5</span><strong>Kennedy Space Center</strong><small>Domingo · 22 nov. 2026</small><span class="status">Roteiro pronto ↗</span>
@@ -124,136 +124,65 @@
   </section>
 
   <section class="day-content" id="day1">
-    <h2 class="section-title">Dia 1 · Miami</h2>
-    <img class="day-hero" src="https://images.unsplash.com/photo-1535498730771-e735b998cd64?auto=format&fit=crop&w=1500&q=85" alt="Praia e arquitetura Art Déco de Miami" loading="lazy">
-    <p class="subtle" style="margin-top:-7px;margin-bottom:16px">Quarta-feira, 18 de novembro de 2026 · Chegada, compras, cultura, praia e jantar cubano.</p>
-    <div class="layout">
-      <div class="main-col" id="roteiro">
-        <div class="timeline">
-          <article class="stop">
-            <div class="stop-top"><div class="time">05h25</div><div><h3>Chegada a Miami</h3><p class="address">Miami International Airport (MIA)</p><p class="desc">Imigração, bagagem e retirada do carro alugado. Reserve cerca de 1h30–2h, com margem para filas.</p></div></div>
-            <div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=Miami+International+Airport&destination=299+SE+3rd+Ave,+Miami,+FL+33131&travelmode=driving" target="_blank" rel="noopener">↗ Rota seguinte</a></div>
-          </article>
-          <article class="stop">
-            <div class="stop-top"><div class="time">07h30</div><div><h3>Whole Foods Market</h3><p class="address">299 SE 3rd Ave, Miami, FL 33131</p><p class="desc">Compras rápidas: água, frutas, lanches e itens para os primeiros dias. O horário de abertura informado é 7h30; confirme perto da viagem.</p></div></div>
-            <div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=299+SE+3rd+Ave,+Miami,+FL+33131&travelmode=driving" target="_blank" rel="noopener">↗ Abrir rota</a><a class="btn btn-secondary" href="https://www.wholefoodsmarket.com/stores/downtownmiami" target="_blank" rel="noopener">Horários</a></div>
-          </article>
-          <article class="stop">
-            <div class="stop-top"><div class="time">09h30</div><div><h3>Vizcaya Museum and Gardens</h3><p class="address">3251 South Miami Ave, Miami, FL 33129</p><p class="desc">Visita à residência histórica e aos jardins. Planeje cerca de 2h–2h15. Verifique ingressos e eventuais alterações de funcionamento.</p></div></div>
-            <div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=299+SE+3rd+Ave,+Miami,+FL+33131&destination=Vizcaya+Museum+and+Gardens,+3251+South+Miami+Ave,+Miami,+FL+33129&travelmode=driving" target="_blank" rel="noopener">↗ Abrir rota</a><a class="btn btn-secondary" href="https://vizcaya.org/" target="_blank" rel="noopener">Ingressos e informações</a></div>
-          </article>
-          <article class="stop">
-            <div class="stop-top"><div class="time">12h30</div><div><h3>Almoço no CRAFT Bayside</h3><p class="address">900 Biscayne Blvd, Suite 101B, Miami, FL 33132</p><p class="desc">Pausa para almoçar em Downtown Miami. Confirme horário, endereço e disponibilidade próximos à data.</p></div></div>
-            <div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=Vizcaya+Museum+and+Gardens,+Miami,+FL&destination=CRAFT+Bayside,+900+Biscayne+Blvd,+Miami,+FL&travelmode=driving" target="_blank" rel="noopener">↗ Abrir rota</a><a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=CRAFT+Bayside+Miami" target="_blank" rel="noopener">Local e avaliações</a></div>
-          </article>
-          <article class="stop">
-            <div class="stop-top"><div class="time">14h30</div><div><h3>Miami Beach · South Beach</h3><p class="address">13th Street Garage, 1301 Collins Ave, Miami Beach, FL 33139</p><p class="desc">Estacione uma vez e explore a pé: Ocean Drive, Lummus Park e praia. Lincoln Road fica como opção se houver disposição.</p></div></div>
-            <div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=CRAFT+Bayside,+900+Biscayne+Blvd,+Miami,+FL&destination=1301+Collins+Ave,+Miami+Beach,+FL+33139&travelmode=driving" target="_blank" rel="noopener">↗ Rota para a garagem</a><a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=Ocean+Drive+Miami+Beach" target="_blank" rel="noopener">Ocean Drive</a></div>
-          </article>
-          <article class="stop">
-            <div class="stop-top"><div class="time">17h30</div><div><h3>Jantar no Versailles Restaurant</h3><p class="address">3555 SW 8th St, Miami, FL 33135</p><p class="desc">Culinária cubana em Little Havana. Boa parada antes de seguir para o hotel. Horários e espera podem variar.</p></div></div>
-            <div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=1301+Collins+Ave,+Miami+Beach,+FL+33139&destination=Versailles+Restaurant,+3555+SW+8th+St,+Miami,+FL+33135&travelmode=driving" target="_blank" rel="noopener">↗ Abrir rota</a><a class="btn btn-secondary" href="https://www.versaillesrestaurant.com/" target="_blank" rel="noopener">Site do restaurante</a></div>
-          </article>
-          <article class="stop">
-            <div class="stop-top"><div class="time">19h00</div><div><h3>Hotel · descanso</h3><p class="address">8655 NW 21st Terrace, Miami, FL 33122</p><p class="desc">Último deslocamento do dia. A previsão é de cerca de 20–35 minutos a partir do Versailles, conforme o trânsito.</p></div></div>
-            <div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=Versailles+Restaurant,+3555+SW+8th+St,+Miami,+FL+33135&destination=8655+NW+21st+Terrace,+Miami,+FL+33122&travelmode=driving" target="_blank" rel="noopener">↗ Rota para o hotel</a></div>
-          </article>
-        </div>
-      </div>
-      <aside class="side">
-        <section class="panel" id="mapa">
-          <div class="panel-head"><h2>🗺️ Mapa do percurso</h2></div>
-          <iframe class="map-frame" title="Mapa da região de Miami" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Miami%2C%20Florida&t=&z=11&ie=UTF8&iwloc=&output=embed"></iframe>
-          <div class="panel-body"><a class="btn btn-primary route-link" href="https://www.google.com/maps/dir/?api=1&origin=Miami+International+Airport,+Miami,+FL&waypoints=299+SE+3rd+Ave,+Miami,+FL+33131%7CVizcaya+Museum+and+Gardens,+Miami,+FL%7CCRAFT+Bayside,+Miami,+FL%7C1301+Collins+Ave,+Miami+Beach,+FL+33139%7CVersailles+Restaurant,+Miami,+FL&destination=8655+NW+21st+Terrace,+Miami,+FL+33122&travelmode=driving" target="_blank" rel="noopener">↗ Abrir percurso completo no Google Maps</a><p style="font-size:.76rem;color:var(--muted);line-height:1.5;margin:10px 0 0">O mapa incorporado mostra a região geral. Use o botão para abrir a rota com as paradas no Google Maps e consultar o trânsito atualizado.</p></div>
-        </section>
-        <section class="panel" id="detalhes">
-          <div class="panel-head"><h2>Horários importantes</h2></div>
-          <div class="panel-body"><ul class="mini-list">
-            <li><span class="dot"></span><span><strong>Whole Foods</strong><br>Planejado para 07h30; confirme o horário da unidade.</span></li>
-            <li><span class="dot"></span><span><strong>Vizcaya</strong><br>Entrada planejada para 09h30; consulte ingressos e calendário oficial.</span></li>
-            <li><span class="dot"></span><span><strong>CRAFT Bayside</strong><br>Confirme funcionamento e disponibilidade para almoço.</span></li>
-            <li><span class="dot"></span><span><strong>13th Street Garage</strong><br>Confira tarifas e regras atuais antes de estacionar.</span></li>
-            <li><span class="dot"></span><span><strong>Versailles</strong><br>Confirme o horário do jantar e considere possível espera.</span></li>
-          </ul></div>
-        </section>
-        <div class="note"><strong>♡ Plano flexível</strong>Se o voo atrasar ou o cansaço apertar, reduza o tempo em Miami Beach e deixe a Lincoln Road para outro dia. O roteiro é uma previsão, não uma agenda rígida.</div>
-      </aside>
-    </div>
+    <p class="back-to-days"><a href="#inicio" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ Ver todos os dias</a></p><h2 class="section-title">Dia 1 · Miami, Downtown e Wynwood</h2>
+    <img class="day-hero" src="https://images.unsplash.com/photo-1535498730771-e735b998cd64?auto=format&fit=crop&w=1500&q=85" alt="Miami e arquitetura Art Déco" loading="lazy">
+    <p class="subtle" style="margin-top:-7px;margin-bottom:16px">Quarta-feira, 18 de novembro de 2026 · Chegada cedo, Vizcaya, Bayside, Metromover e Wynwood.</p>
+    <div class="layout"><div class="main-col" id="roteiro"><div class="timeline">
+      <article class="stop"><div class="stop-top"><div class="time">05h25</div><div><h3>Chegada a Miami</h3><p class="address">Miami International Airport (MIA)</p><p class="desc">Imigração, bagagem e retirada do carro alugado. O tempo depende das filas e da locadora.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=Miami+International+Airport&destination=Whole+Foods+Market+299+SE+3rd+Ave+Miami+FL&travelmode=driving" target="_blank" rel="noopener">↗ Rota seguinte</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">07h30–08h15</div><div><h3>Whole Foods Market · Downtown Miami</h3><p class="address">299 SE 3rd Ave, Miami, FL 33131</p><p class="desc">Parada rápida para água, frutas, lanches e itens para os primeiros dias.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Whole+Foods+Market+299+SE+3rd+Ave+Miami+FL+33131" target="_blank" rel="noopener">↗ Localização</a><a class="btn btn-secondary" href="https://www.wholefoodsmarket.com/stores/downtownmiami" target="_blank" rel="noopener">Site e horários</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">09h30–11h45</div><div><h3>Vizcaya Museum and Gardens</h3><p class="address">3251 South Miami Ave, Miami, FL 33129</p><p class="desc">Visita à residência histórica e aos jardins. Confira ingressos e horários oficiais perto da viagem.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=Whole+Foods+Market+299+SE+3rd+Ave+Miami+FL&destination=Vizcaya+Museum+and+Gardens+3251+South+Miami+Ave+Miami+FL&travelmode=driving" target="_blank" rel="noopener">↗ Rota</a><a class="btn btn-secondary" href="https://vizcaya.org/" target="_blank" rel="noopener">Site oficial e ingressos</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">12h15–13h15</div><div><h3>Almoço no CRAFT Bayside</h3><p class="address">900 Biscayne Blvd, Suite 101B, Miami, FL 33132</p><p class="desc">Almoço na região de Downtown, perto do próximo passeio.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=CRAFT+Bayside+900+Biscayne+Blvd+Miami+FL" target="_blank" rel="noopener">↗ Localização</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">13h15–14h15</div><div><h3>Bayside Marketplace e orla</h3><p class="address">401 Biscayne Blvd, Miami, FL 33132</p><p class="desc">Passeio pela marina, lojas, baía e skyline. Se houver tempo, considerem a roda-gigante Skyviews Miami.</p><p class="desc"><strong>Estacionamento:</strong> Bayside Marketplace Garage, junto ao complexo. Deixe o carro aqui para o almoço, a orla e o Metromover.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Bayside+Marketplace+Garage+401+Biscayne+Blvd+Miami" target="_blank" rel="noopener">↗ Estacionamento Bayside</a><a class="btn btn-secondary" href="https://www.baysidemarketplace.com/" target="_blank" rel="noopener">Site oficial</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">14h15–15h30</div><div><h3>Metromover gratuito pelo Downtown</h3><p class="address">Estação College/Bayside · 225 NE 3rd St, Miami, FL</p><p class="desc">Faça um circuito no sistema elevado gratuito e, se quiserem, desçam para uma caminhada curta. O carro fica estacionado no Bayside.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=College+Bayside+Metromover+Station+Miami" target="_blank" rel="noopener">↗ Estação no mapa</a><a class="btn btn-secondary" href="https://www.miamidade.gov/global/transportation/metromover.page" target="_blank" rel="noopener">Informações oficiais</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">16h00–18h30</div><div><h3>Wynwood · murais e arte urbana</h3><p class="address">Wynwood Walls · 2516 NW 2nd Ave, Miami, FL 33127</p><p class="desc">Explore os murais e as ruas do bairro. Wynwood Walls é uma atração paga; confira ingressos e horário antes da visita.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Wynwood+Walls+Miami+FL" target="_blank" rel="noopener">↗ Wynwood Walls</a><a class="btn btn-secondary" href="https://thewynwoodwalls.com/" target="_blank" rel="noopener">Site oficial</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">18h30–19h15 (estimativa)</div><div><h3>Whole Foods Market · Doral</h3><p class="address">10700 NW 41st St, Doral, FL 33178</p><p class="desc">Parada no caminho de volta para comprar alimentos, produtos frescos e refeições prontas antes de chegar ao hotel.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Whole+Foods+Market+10700+NW+41st+St+Doral+FL+33178" target="_blank" rel="noopener">↗ Localização</a><a class="btn btn-secondary" href="https://www.wholefoodsmarket.com/stores/doral" target="_blank" rel="noopener">Site e horários</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">A partir de 19h15</div><div><h3>Retorno ao hotel</h3><p class="address">Extended Stay America Premier Suites – Miami Airport – Doral – 87th Avenue South</p><p class="desc">Depois das compras, siga para o hotel e descanse. O dia começa muito cedo; deixe o jantar flexível.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=Whole+Foods+Market+10700+NW+41st+St+Doral+FL&destination=Extended+Stay+America+Premier+Suites+Miami+Airport+Doral+87th+Avenue+South&travelmode=driving" target="_blank" rel="noopener">↗ Rota para o hotel</a></div></article>
+    </div></div><aside class="side"><section class="panel"><div class="panel-head"><h2>Mapa do percurso</h2></div><iframe class="map-frame" title="Mapa do primeiro dia em Miami" loading="lazy" src="https://maps.google.com/maps?q=Bayside+Marketplace+Miami&t=&z=12&ie=UTF8&iwloc=&output=embed"></iframe><div class="panel-body"><a class="btn btn-primary route-link" href="https://www.google.com/maps/dir/?api=1&origin=Miami+International+Airport&destination=Extended+Stay+America+Premier+Suites+Miami+Airport+Doral+87th+Avenue+South&waypoints=Whole+Foods+Market+299+SE+3rd+Ave+Miami%7CVizcaya+Museum+and+Gardens%7CCRAFT+Bayside%7CBayside+Marketplace+Garage%7CWynwood+Walls%7CWhole+Foods+Market+10700+NW+41st+St+Doral&travelmode=driving" target="_blank" rel="noopener">↗ Abrir percurso completo</a></div></section><section class="panel"><div class="panel-head"><h2>Pontos de atenção</h2></div><div class="panel-body"><ul class="mini-list"><li><span class="dot"></span><span><strong>Vizcaya</strong><br>Confirmar ingressos e horário de entrada.</span></li><li><span class="dot"></span><span><strong>Bayside</strong><br>Estacionar na garagem do complexo para seguir a pé e usar o Metromover.</span></li><li><span class="dot"></span><span><strong>Wynwood Walls</strong><br>Conferir horário e ingresso antes de ir.</span></li><li><span class="dot"></span><span><strong>Ritmo</strong><br>Se houver atraso ou cansaço, encurte Bayside antes de cortar Vizcaya.</span></li></ul></div></section><div class="note"><strong>Plano flexível</strong>Chegada de madrugada pode gerar cansaço. Os horários são estimativas; trânsito, filas e retirada do carro podem alterar o dia.</div></aside></div>
   </section>
 
   <section class="day-content" id="day2" hidden>
-    <h2 class="section-title">Dia 2 · Compras e Fort Lauderdale</h2>
-    <img class="day-hero" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1500&q=85" alt="Mar e praia no sul da Flórida" loading="lazy">
-    <p class="subtle" style="margin-top:-7px;margin-bottom:16px">Quinta-feira, 19 de novembro de 2026 · Outlet, praia, passeio pela Las Olas e jantar mexicano.</p>
-    <div class="layout">
-      <div class="main-col" id="roteiro-dia2">
-        <div class="timeline">
-          <article class="stop">
-            <div class="stop-top"><div class="time">09h00</div><div><h3>Saída de Miami</h3><p class="address">Trajeto até Sawgrass Mills, Sunrise, FL</p><p class="desc">Saia por volta das 9h. O tempo de viagem depende do trânsito; considere cerca de 45–75 minutos.</p></div></div>
-            <div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=Miami,+FL&destination=Sawgrass+Mills,+12801+W+Sunrise+Blvd,+Sunrise,+FL+33323&travelmode=driving" target="_blank" rel="noopener">↗ Rota para o outlet</a></div>
-          </article>
-          <article class="stop">
-            <div class="stop-top"><div class="time">10h00</div><div><h3>Compras no Sawgrass Mills</h3><p class="address">12801 W Sunrise Blvd, Sunrise, FL 33323</p><p class="desc">Outlet com grande variedade de lojas. Para manter o restante do roteiro, planeje compras até aproximadamente 13h. Faça uma lista de prioridades: o complexo é grande.</p></div></div>
-            <div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=Sawgrass+Mills,+12801+W+Sunrise+Blvd,+Sunrise,+FL+33323&travelmode=driving" target="_blank" rel="noopener">↗ Abrir rota</a><a class="btn btn-secondary" href="https://www.simon.com/mall/sawgrass-mills" target="_blank" rel="noopener">Lojas e informações</a></div>
-          </article>
-          <article class="stop">
-            <div class="stop-top"><div class="time">13h00</div><div><h3>Deixar as malas no hotel</h3><p class="address">Extended Stay America Premier Suites – Fort Lauderdale – Deerfield Beach</p><p class="desc">Faça uma parada para deixar as malas antes de seguir para a praia. Confirme com o hotel se é possível guardar a bagagem antes do horário de check-in.</p></div></div>
-            <div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Extended+Stay+America+Premier+Suites+Fort+Lauderdale+Deerfield+Beach" target="_blank" rel="noopener">↗ Localizar hotel</a></div>
-          </article>
-          <article class="stop">
-            <div class="stop-top"><div class="time">14h00</div><div><h3>Almoço no Coconuts</h3><p class="address">429 Seabreeze Blvd, Fort Lauderdale, FL 33301</p><p class="desc">Restaurante descontraído à beira da água, conhecido pelos frutos do mar. Pode haver fila; não conte com mesa imediata em horário movimentado.</p></div></div>
-            <div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=Coconuts,+429+Seabreeze+Blvd,+Fort+Lauderdale,+FL+33301&travelmode=driving" target="_blank" rel="noopener">↗ Abrir rota</a><a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=Coconuts+Fort+Lauderdale" target="_blank" rel="noopener">Local e avaliações</a></div>
-          </article>
-          <article class="stop">
-            <div class="stop-top"><div class="time">15h15</div><div><h3>Fort Lauderdale Beach</h3><p class="address">A região da praia, perto da Seabreeze Boulevard</p><p class="desc">Caminhe pela orla e aproveite a praia. O tempo disponível pode variar conforme a duração do almoço e o trânsito.</p></div></div>
-            <div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Fort+Lauderdale+Beach" target="_blank" rel="noopener">↗ Ver praia no mapa</a></div>
-          </article>
-          <article class="stop">
-            <div class="stop-top"><div class="time">16h30</div><div><h3>Las Olas Boulevard e Riverwalk</h3><p class="address">Las Olas Blvd, Fort Lauderdale, FL</p><p class="desc">Passeio a pé por lojas, cafés, galerias e pelo Riverwalk, junto ao New River. Reserve cerca de 1h30.</p></div></div>
-            <div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Las+Olas+Boulevard+Fort+Lauderdale" target="_blank" rel="noopener">↗ Las Olas Boulevard</a><a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=Fort+Lauderdale+Riverwalk" target="_blank" rel="noopener">Riverwalk</a></div>
-          </article>
-          <article class="stop">
-            <div class="stop-top"><div class="time">18h30</div><div><h3>Jantar no El Camino</h3><p class="address">817 E Las Olas Blvd, Fort Lauderdale, FL 33301</p><p class="desc">Restaurante mexicano informal, com tacos, quesadillas e guacamole. A ideia é chegar sem reserva; em horários movimentados, pode haver espera.</p></div></div>
-            <div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=El+Camino,+817+E+Las+Olas+Blvd,+Fort+Lauderdale,+FL+33301&travelmode=driving" target="_blank" rel="noopener">↗ Abrir rota</a><a class="btn btn-secondary" href="https://elcaminoftlauderdale.com/" target="_blank" rel="noopener">Site e cardápio</a></div>
-          </article>
-          <article class="stop">
-            <div class="stop-top"><div class="time">20h00</div><div><h3>Volta ao hotel</h3><p class="address">Extended Stay America Premier Suites – Fort Lauderdale – Deerfield Beach</p><p class="desc">Retorno para Deerfield Beach. Consulte o trânsito antes de sair; o trajeto pode levar cerca de 25–45 minutos ou mais.</p></div></div>
-            <div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=El+Camino,+817+E+Las+Olas+Blvd,+Fort+Lauderdale,+FL+33301&destination=Extended+Stay+America+Premier+Suites+Fort+Lauderdale+Deerfield+Beach&travelmode=driving" target="_blank" rel="noopener">↗ Rota para o hotel</a></div>
-          </article>
-        </div>
-      </div>
-      <aside class="side">
-        <section class="panel" id="mapa-dia2">
-          <div class="panel-head"><h2>Mapa do percurso</h2></div>
-          <iframe class="map-frame" title="Mapa de Sawgrass Mills e Fort Lauderdale" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Fort%20Lauderdale%2C%20Florida&t=&z=11&ie=UTF8&iwloc=&output=embed"></iframe>
-          <div class="panel-body"><a class="btn btn-primary route-link" href="https://www.google.com/maps/dir/?api=1&origin=Miami,+FL&destination=Extended+Stay+America+Premier+Suites+Fort+Lauderdale+Deerfield+Beach&waypoints=Sawgrass+Mills,+Sunrise,+FL%7CCoconuts,+Fort+Lauderdale,+FL%7CFort+Lauderdale+Beach%7CLas+Olas+Boulevard,+Fort+Lauderdale,+FL%7CEl+Camino,+817+E+Las+Olas+Blvd,+Fort+Lauderdale,+FL&travelmode=driving" target="_blank" rel="noopener">↗ Abrir percurso no Google Maps</a><p style="font-size:.76rem;color:var(--muted);line-height:1.5;margin:10px 0 0">Confira trânsito e estacionamento no dia. A rota completa pode precisar ser ajustada no Google Maps.</p></div>
-        </section>
-        <section class="panel">
-          <div class="panel-head"><h2>Pontos de atenção</h2></div>
-          <div class="panel-body"><ul class="mini-list">
-            <li><span class="dot"></span><span><strong>Sawgrass Mills</strong><br>O horário planejado é 10h–13h; priorize as lojas mais importantes.</span></li>
-            <li><span class="dot"></span><span><strong>Hotel</strong><br>Confirme se aceitam guardar malas antes do check-in.</span></li>
-            <li><span class="dot"></span><span><strong>Coconuts</strong><br>O almoço é sem horário garantido; pode haver espera.</span></li>
-            <li><span class="dot"></span><span><strong>El Camino</strong><br>Plano de jantar sem reserva; considere fila e chegue com flexibilidade.</span></li>
-          </ul></div>
-        </section>
-        <div class="note"><strong>Plano flexível</strong>Se as compras demorarem, reduza o tempo de praia ou encurte a caminhada pela Las Olas. Não é necessário cumprir todos os horários à risca.</div>
-      </aside>
-    </div>
+    <p class="back-to-days"><a href="#inicio" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ Ver todos os dias</a></p><h2 class="section-title">Dia 2 · Compras em Miami e South Beach</h2>
+    <img class="day-hero" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1500&q=85" alt="Costa da Flórida" loading="lazy">
+    <p class="subtle" style="margin-top:-7px;margin-bottom:16px">Quinta-feira, 19 de novembro de 2026 · Walmart, Target, Dolphin Mall, Little Havana e Miami Beach.</p>
+    <div class="layout"><div class="main-col" id="roteiro-dia2"><div class="timeline">
+      <article class="stop"><div class="stop-top"><div class="time">08h45</div><div><h3>Saída do hotel em Doral</h3><p class="address">Extended Stay America Premier Suites – Miami Airport – Doral – 87th Avenue South</p><p class="desc">Dia dedicado às compras e ao passeio por Miami no fim da tarde.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=Extended+Stay+America+Premier+Suites+Miami+Airport+Doral+87th+Avenue+South&destination=Walmart+Supercenter+8651+NW+13th+Terrace+Doral+FL&travelmode=driving" target="_blank" rel="noopener">↗ Rota para o Walmart</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">09h00–10h00</div><div><h3>Walmart Supercenter</h3><p class="address">8651 NW 13th Terrace, Doral, FL 33126</p><p class="desc">Primeira parada para compras gerais, produtos de higiene, snacks e itens de viagem.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Walmart+Supercenter+8651+NW+13th+Terrace+Doral+FL" target="_blank" rel="noopener">↗ Localização</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">10h10–10h50</div><div><h3>Target</h3><p class="address">3825 NW 7th St, Miami, FL 33126</p><p class="desc">Segunda parada para comparar produtos de casa, roupas básicas, cosméticos e itens de viagem.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Target+3825+NW+7th+St+Miami+FL" target="_blank" rel="noopener">↗ Localização</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">11h00–15h00</div><div><h3>Dolphin Mall</h3><p class="address">11401 NW 12th St, Miami, FL 33172</p><p class="desc">Outlet escolhido para o dia. Reserve várias horas para compras e almoço no próprio shopping; a abertura habitual é às 10h, mas confirme o horário especial da data.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=Target+3825+NW+7th+St+Miami+FL&destination=Dolphin+Mall+11401+NW+12th+St+Miami+FL&travelmode=driving" target="_blank" rel="noopener">↗ Rota para o outlet</a><a class="btn btn-secondary" href="https://www.simon.com/mall/dolphin-mall" target="_blank" rel="noopener">Lojas, mapa e horários</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">15h00–16h00</div><div><h3>Volta ao hotel para deixar as compras</h3><p class="address">Extended Stay America Premier Suites – Miami Airport – Doral – 87th Avenue South</p><p class="desc">Deixe as sacolas no quarto e faça uma pausa breve antes de seguir para Little Havana.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=Dolphin+Mall+Miami+FL&destination=Extended+Stay+America+Premier+Suites+Miami+Airport+Doral+87th+Avenue+South&travelmode=driving" target="_blank" rel="noopener">↗ Rota para o hotel</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">16h30–17h30</div><div><h3>Versailles Restaurant · café cubano</h3><p class="address">3555 SW 8th St, Miami, FL 33135</p><p class="desc">Parada na famosa ventanita para tomar café cubano e provar um doce, seguida de uma caminhada curta por Little Havana.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=Extended+Stay+America+Premier+Suites+Miami+Airport+Doral+87th+Avenue+South&destination=Versailles+Restaurant+3555+SW+8th+St+Miami+FL&travelmode=driving" target="_blank" rel="noopener">↗ Rota para Versailles</a><a class="btn btn-secondary" href="https://www.versaillesrestaurant.com/" target="_blank" rel="noopener">Site oficial</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">18h00–20h30</div><div><h3>South Beach · Ocean Drive e Lummus Park</h3><p class="address">Estacionamento recomendado: Miami Beach Public Garage, 200 7th Street, Miami Beach, FL</p><p class="desc">Estacione na garagem pública e caminhe por Ocean Drive, pelos edifícios Art Déco, pelo Lummus Park e pela praia. O estacionamento é pago; confirme tarifas e disponibilidade.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=Versailles+Restaurant+3555+SW+8th+St+Miami+FL&destination=Miami+Beach+Public+Garage+200+7th+Street+Miami+Beach+FL&travelmode=driving" target="_blank" rel="noopener">↗ Rota para a garagem</a><a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=Miami+Beach+Public+Garage+200+7th+Street+Miami+Beach" target="_blank" rel="noopener">Garagem no mapa</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">Após 20h30 · opcional</div><div><h3>Lincoln Road</h3><p class="address">Lincoln Road, Miami Beach, FL</p><p class="desc">Se ainda houver disposição, caminhem pela avenida de pedestres com lojas, cafés e restaurantes; caso contrário, retornem ao hotel.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Lincoln+Road+Miami+Beach" target="_blank" rel="noopener">↗ Lincoln Road</a><a class="btn btn-secondary" href="https://lincolnroad.com/visit/" target="_blank" rel="noopener">Site oficial</a></div></article>
+    </div></div><aside class="side"><section class="panel"><div class="panel-head"><h2>Mapa do percurso</h2></div><iframe class="map-frame" title="Mapa do dia de compras em Miami" loading="lazy" src="https://maps.google.com/maps?q=Dolphin+Mall+Miami&t=&z=11&ie=UTF8&iwloc=&output=embed"></iframe><div class="panel-body"><a class="btn btn-primary route-link" href="https://www.google.com/maps/dir/?api=1&origin=Extended+Stay+America+Premier+Suites+Miami+Airport+Doral+87th+Avenue+South&destination=Extended+Stay+America+Premier+Suites+Miami+Airport+Doral+87th+Avenue+South&waypoints=Walmart+Supercenter+8651+NW+13th+Terrace+Doral%7CTarget+3825+NW+7th+St+Miami%7CDolphin+Mall%7CVersailles+Restaurant%7CMiami+Beach+Public+Garage+200+7th+Street&travelmode=driving" target="_blank" rel="noopener">↗ Abrir percurso completo</a></div></section><section class="panel"><div class="panel-head"><h2>Estacionamento e lembretes</h2></div><div class="panel-body"><ul class="mini-list"><li><span class="dot"></span><span><strong>Dolphin Mall</strong><br>Estacionamento geral gratuito; confira as placas e a localização do carro.</span></li><li><span class="dot"></span><span><strong>Miami Beach</strong><br>Garagem pública na 7th Street para explorar a região a pé.</span></li><li><span class="dot"></span><span><strong>Ritmo</strong><br>Se as compras se estenderem, reduza o tempo em Lincoln Road, que é opcional.</span></li></ul></div></section><div class="note"><strong>Plano flexível</strong>O horário do Dolphin Mall pode mudar em períodos especiais. Verifique o site oficial antes de sair; trânsito e tempo nas lojas também podem alterar o roteiro.</div></aside></div>
   </section>
+
   <section class="day-content" id="day3" hidden>
-    <h2 class="section-title">Dia 3 · A planejar</h2>
-    <div class="planning-empty"><strong>Este dia ainda está em construção.</strong>Quando definirmos os passeios, adicionaremos aqui os horários, endereços, rotas e informações úteis.</div>
+    <p class="back-to-days"><a href="#inicio" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ Ver todos os dias</a></p><h2 class="section-title">Dia 3 · Key West</h2>
+    <img class="day-hero" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1500&q=85" alt="Mar azul das Florida Keys" loading="lazy">
+    <p class="subtle" style="margin-top:-7px;margin-bottom:16px">Sexta-feira, 20 de novembro de 2026 · Bate-volta de Miami a Key West.</p>
+    <div class="layout"><div class="main-col" id="roteiro-dia3"><div class="timeline">
+      <article class="stop"><div class="stop-top"><div class="time">05h30</div><div><h3>Saída do hotel em Doral</h3><p class="address">Extended Stay America Premier Suites – Miami Airport – Doral – 87th Avenue South</p><p class="desc">Saída cedo para aproveitar o dia. A viagem leva aproximadamente 3h30–4h por trecho sem paradas, podendo aumentar com trânsito.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=Extended+Stay+America+Premier+Suites+Miami+Airport+Doral+87th+Avenue+South&destination=Southernmost+Point+Buoy+Key+West&travelmode=driving" target="_blank" rel="noopener">↗ Rota até Key West</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">10h00–11h00 (estimativa)</div><div><h3>Southernmost Point</h3><p class="address">1400 Whitehead St, Key West, FL 33040</p><p class="desc">Visite o marco colorido à beira-mar e tire fotos. Pode haver fila para fotografar.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Southernmost+Point+Buoy+Key+West" target="_blank" rel="noopener">↗ Localização</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">11h00–12h15</div><div><h3>Duval Street</h3><p class="address">Duval Street, Key West, FL</p><p class="desc">Caminhada pelo centro histórico, lojas e cafés. A rua e seus arredores são a segunda prioridade do passeio.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Duval+Street+Key+West" target="_blank" rel="noopener">↗ Duval Street</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">12h30–13h30</div><div><h3>Almoço saudável · Date & Thyme Organic Café and Market</h3><p class="address">829 Fleming St, Key West, FL 33040</p><p class="desc">Opção de almoço com saladas, wraps e bowls. Confirme o cardápio e o horário de funcionamento antes da viagem.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Date+and+Thyme+829+Fleming+Street+Key+West" target="_blank" rel="noopener">↗ Localização</a><a class="btn btn-secondary" href="https://www.dateandthyme.com/" target="_blank" rel="noopener">Site e cardápio</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">13h30–16h00</div><div><h3>Duval Street e arredores</h3><p class="address">Centro de Key West</p><p class="desc">Tempo livre para continuar caminhando, entrar nas lojas, provar Key lime pie ou tomar algo. Não acrescentamos outras atrações para manter o dia simples.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Duval+Street+Key+West" target="_blank" rel="noopener">↗ Explorar a região</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">16h00–17h00</div><div><h3>Voltar ao estacionamento e preparar a saída</h3><p class="address">Estacionamento público próximo ao Southernmost Point / centro histórico</p><p class="desc">Reserve margem para caminhar até o carro e sair de Key West às 17h, conforme combinado.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=public+parking+near+Southernmost+Point+Key+West" target="_blank" rel="noopener">↗ Estacionamento no mapa</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">17h00</div><div><h3>Saída de Key West para Doral</h3><p class="address">Destino: hotel em Doral</p><p class="desc">A chegada pode ocorrer por volta de 20h30–22h ou mais tarde, dependendo do trânsito. Planeje uma pausa segura se estiverem cansados.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=Key+West+FL&destination=Extended+Stay+America+Premier+Suites+Miami+Airport+Doral+87th+Avenue+South&travelmode=driving" target="_blank" rel="noopener">↗ Rota de volta</a></div></article>
+    </div></div><aside class="side"><section class="panel"><div class="panel-head"><h2>Mapa de Key West</h2></div><iframe class="map-frame" title="Mapa de Key West" loading="lazy" src="https://maps.google.com/maps?q=Duval+Street+Key+West&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe><div class="panel-body"><a class="btn btn-primary route-link" href="https://www.google.com/maps/dir/?api=1&origin=Extended+Stay+America+Premier+Suites+Miami+Airport+Doral+87th+Avenue+South&destination=Extended+Stay+America+Premier+Suites+Miami+Airport+Doral+87th+Avenue+South&waypoints=Southernmost+Point+Buoy%7CDuval+Street%7CDate+%26+Thyme+Organic+Cafe+829+Fleming+Street&travelmode=driving" target="_blank" rel="noopener">↗ Abrir percurso completo</a></div></section><div class="note"><strong>Dia longo de estrada</strong>O roteiro mantém apenas Southernmost Point e Duval Street, com almoço no Date & Thyme. A saída às 17h é a prioridade; confirme trânsito e estacionamento no dia.</div></aside></div>
   </section>
 
   <section class="day-content" id="day4" hidden>
-    <h2 class="section-title">Dia 4 · A planejar</h2>
-    <img class="day-hero" src="https://images.unsplash.com/photo-150053085085?auto=format&fit=crop&w=1500&q=85" alt="Paisagem da Flórida" loading="lazy">
-    <div class="planning-empty"><strong>Sábado, 21 de novembro de 2026.</strong>Este dia permanece em aberto. Quando definirmos os passeios, adicionaremos horários, endereços, fotos e rotas.</div>
+    <p class="back-to-days"><a href="#inicio" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ Ver todos os dias</a></p><h2 class="section-title">Dia 4 · Miami → Deerfield Beach</h2>
+    <img class="day-hero" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1500&q=85" alt="Praia da Flórida" loading="lazy">
+    <p class="subtle" style="margin-top:-7px;margin-bottom:16px">Sábado, 21 de novembro de 2026 · Apenas deslocamento e mudança de hospedagem. Programação em Deerfield Beach será definida depois.</p>
+    <div class="layout"><div class="main-col"><div class="timeline">
+      <article class="stop"><div class="stop-top"><div class="time">Manhã</div><div><h3>Check-out em Doral</h3><p class="address">Extended Stay America Premier Suites – Miami Airport – Doral – 87th Avenue South</p><p class="desc">Organizar as malas e fazer o check-out.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Extended+Stay+America+Premier+Suites+Miami+Airport+Doral+87th+Avenue+South" target="_blank" rel="noopener">↗ Hotel de saída</a></div></article>
+      <article class="stop"><div class="stop-top"><div class="time">Após o check-out</div><div><h3>Deslocamento para Deerfield Beach</h3><p class="address">Extended Stay America Premier Suites – Fort Lauderdale – Deerfield Beach</p><p class="desc">Dirigir até o hotel da próxima hospedagem. O restante do dia ficará em aberto para montar a programação local posteriormente.</p></div></div><div class="stop-actions"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&origin=Extended+Stay+America+Premier+Suites+Miami+Airport+Doral+87th+Avenue+South&destination=Extended+Stay+America+Premier+Suites+Fort+Lauderdale+Deerfield+Beach&travelmode=driving" target="_blank" rel="noopener">↗ Rota entre hotéis</a><a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=Extended+Stay+America+Premier+Suites+Fort+Lauderdale+Deerfield+Beach" target="_blank" rel="noopener">Hotel em Deerfield</a></div></article>
+    </div></div><aside class="side"><section class="panel"><div class="panel-head"><h2>Mudança de hospedagem</h2></div><div class="panel-body"><p class="desc">O dia 21 está reservado para o deslocamento. Não há passeios nem restaurantes definidos ainda.</p></div></section><div class="note"><strong>Programação em aberto</strong>Vamos montar as atividades de Deerfield Beach separadamente, sem acrescentar compromissos a este dia por enquanto.</div></aside></div>
   </section>
 
   <section class="day-content" id="day5" hidden>
-    <h2 class="section-title">Dia 5 · Kennedy Space Center e chegada a Orlando</h2>
+    <p class="back-to-days"><a href="#inicio" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ Ver todos os dias</a></p><h2 class="section-title">Dia 5 · Kennedy Space Center e chegada a Orlando</h2>
     <img class="day-hero" src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1500&q=85" alt="Foguete e exploração espacial" loading="lazy">
     <p class="subtle" style="margin-top:-7px;margin-bottom:16px">Domingo, 22 de novembro de 2026 · Aproveitar o complexo espacial o máximo possível e seguir para Orlando.</p>
     <div class="layout"><div class="main-col"><div class="timeline">
@@ -265,7 +194,7 @@
   </section>
 
   <section class="day-content" id="day6" hidden>
-    <h2 class="section-title">Dia 6 · EPCOT</h2>
+    <p class="back-to-days"><a href="#inicio" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ Ver todos os dias</a></p><h2 class="section-title">Dia 6 · EPCOT</h2>
     <img class="day-hero" src="https://images.unsplash.com/photo-1513883049090-d0b7439799bf?auto=format&fit=crop&w=1500&q=85" alt="Parque temático com atmosfera festiva" loading="lazy">
     <p class="subtle" style="margin-top:-7px;margin-bottom:16px">Segunda-feira, 23 de novembro de 2026 · Chegar antes da abertura e aproveitar o parque o dia inteiro.</p>
     <div class="layout"><div class="main-col"><div class="timeline">
@@ -276,13 +205,13 @@
   </section>
 
   <section class="day-content" id="day7" hidden>
-    <h2 class="section-title">Dia 7 · A planejar</h2>
+    <p class="back-to-days"><a href="#inicio" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ Ver todos os dias</a></p><h2 class="section-title">Dia 7 · A planejar</h2>
     <img class="day-hero" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1500&q=85" alt="Paisagem para planejar o dia" loading="lazy">
     <div class="planning-empty"><strong>Terça-feira, 24 de novembro de 2026.</strong>Dia mantido em aberto para definirmos o roteiro. Como o voo sai de Miami na manhã seguinte, será importante decidir onde dormir na noite do dia 24 e planejar o deslocamento até o aeroporto.</div>
   </section>
 
   <section class="day-content" id="day8" hidden>
-    <h2 class="section-title">Dia 8 · Volta ao Brasil</h2>
+    <p class="back-to-days"><a href="#inicio" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ Ver todos os dias</a></p><h2 class="section-title">Dia 8 · Volta ao Brasil</h2>
     <img class="day-hero" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1500&q=85" alt="Avião em voo" loading="lazy">
     <p class="subtle" style="margin-top:-7px;margin-bottom:16px">Quarta-feira, 25 de novembro de 2026 · Saída de Miami (MIA) às 09h20.</p>
     <div class="layout"><div class="main-col"><div class="timeline">
@@ -310,7 +239,10 @@
         item.setAttribute('aria-pressed', String(active));
       });
       daySections.forEach(section => { section.hidden = section.id !== selected; });
-      document.getElementById('inicio').scrollIntoView({behavior:'smooth', block:'start'});
+      const targetSection = document.getElementById(selected);
+      if (targetSection) {
+        targetSection.scrollIntoView({behavior:'smooth', block:'start'});
+      }
     });
   });
 </script>

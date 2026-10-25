@@ -1,29 +1,29 @@
 # Here we go 🫶🏼
 
-Site estático, responsivo e mobile-first para organizar os dias da viagem.
+Site estático, responsivo e pensado para celular para organizar a viagem à Flórida de 18 a 25 de novembro de 2026.
 
-## Arquivos
-- `index.html`: site completo.
-- `vercel.json`: configuração simples da Vercel.
+## Arquivos do projeto
+- `index.html`: site completo com roteiros, links, mapas e navegação entre os dias.
+- `florida-miami-hero.png`: imagem de capa usada pelo site.
+- `vercel.json`: configuração simples para implantação na Vercel.
 
 ## Atualizar o site publicado
-1. No GitHub, abra o repositório `nossa-viagem-miami`.
-2. Use **Add file → Upload files** para enviar os arquivos atualizados, ou abra `index.html` e use o lápis para editar.
-3. Faça **Commit changes**. Se o repositório estiver conectado à Vercel, ela publicará a atualização automaticamente.
-
-## Renomear o projeto na Vercel
-1. Abra o projeto na Vercel.
-2. Entre em **Settings → General**.
-3. Procure **Project Name**, altere para `here-we-go` (ou outro nome disponível) e salve.
-4. Verifique a seção **Domains**. Se o endereço antigo não tiver sido alterado automaticamente, adicione/ajuste o domínio padrão disponível para o novo nome.
-5. Teste o novo endereço e compartilhe-o. O endereço antigo pode deixar de ser o principal; confirme antes de enviar o novo link.
+1. Abra o repositório `nossa-viagem-miami` no GitHub.
+2. Use **Add file → Upload files** e envie os arquivos atualizados da pasta do projeto (`index.html`, `README.md`, `florida-miami-hero.png` e `vercel.json`). Se o GitHub perguntar se deseja substituir os arquivos existentes, confirme.
+3. Clique em **Commit changes**. Se o repositório estiver conectado à Vercel, a publicação será feita automaticamente.
+4. Abra o site publicado e teste os botões dos dias, mapas e links.
 
 ## Conteúdo desta versão
-- Nome e identidade visual: Here we go 🫶🏼.
-- Estrutura com seletor de dias; Dia 1 de Miami em 18/11/2026 está preenchido.
-- Dias 3, 4 e 7 permanecem em aberto; dia 5 (22/11) inclui Kennedy Space Center e jantar no Ole Red; dia 6 (23/11) inclui EPCOT; dia 8 (25/11) registra os voos de retorno MIA–GRU–MCZ.
-- Removidas as caixas de conclusão e a barra de progresso.
-- Cartões com endereços, links de navegação e mapa incorporado.
+- **18/11 — Miami:** chegada, Whole Foods Downtown, Vizcaya, almoço no CRAFT Bayside, Bayside Marketplace, estacionamento no Bayside, Metromover, Wynwood e parada no Whole Foods de Doral antes do hotel.
+- **19/11 — Compras e Miami Beach:** Walmart, Target, Dolphin Mall, retorno ao hotel para deixar as compras, café cubano na ventanita do Versailles, South Beach/Ocean Drive e estacionamento público na 7th Street. Lincoln Road opcional.
+- **20/11 — Key West:** saída cedo de Doral, Southernmost Point, Duval Street, almoço no Date & Thyme Organic Café and Market e saída de Key West às 17h.
+- **21/11 — Deerfield Beach:** apenas check-out em Doral e deslocamento para o hotel em Deerfield Beach; programação local ainda em aberto.
+- **22/11:** Kennedy Space Center e chegada a Orlando.
+- **23/11:** EPCOT.
+- **24/11:** dia em aberto e retorno à região de Miami para dormir antes do voo.
+- **25/11:** retorno de Miami, voo LA8195 MIA–GRU às 09h20 e conexão LA4772 GRU–MCZ.
 
 ## Observações
-O mapa incorporado mostra a região geral de Miami; o botão do percurso abre o Google Maps. Reconfirme horários, endereços e tarifas perto da viagem. A versão atual não sincroniza dados entre dispositivos, pois não usa banco de dados.
+- Horários, tarifas, estacionamento, trânsito e funcionamento devem ser reconfirmados perto da viagem.
+- Os links de mapas abrem no Google Maps; o mapa incorporado mostra a região geral.
+- O site é estático e não sincroniza dados editados por diferentes pessoas em tempo real.
